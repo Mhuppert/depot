@@ -1,13 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 ruby_book:
-  title: Programming Ruby
+  title:       Programming Ruby
   description: Dummy description
-  price: 1234
-  image_url: ruby.png
+  price:       1234
+  image_url:   ruby.png
 
 rails_book:
-  title: Agile Web Development with Rails
+  title:       Agile Web Development with Rails
   description: Dummy description
-  price: 2345
-  image_url: rails.png
+  price:       2345
+  image_url:   rails.png
+  
