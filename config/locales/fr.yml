@@ -1,0 +1,93 @@
+#START:layout
+#START:main
+#START:cart
+#START:currency
+#START:checkout
+#START:errors
+#START:model
+#START:flash
+fr:
+#END:cart
+
+#END:flash
+#END:model
+#END:errors
+#END:checkout
+#END:main
+#END:layout
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format: "%n&nbsp;%u"
+#END:currency
+
+#START:model
+#START:errors
+  activerecord:
+#END:errors
+    models:
+      order: "commande"
+    attributes:
+      order:
+        address: "Adresse"
+        name: "Nom"
+        email: "E-mail"
+        pay_type: "Paiement"
+#END:model
+#START:errors
+    errors:
+      template:
+        body: "Il y a des probl&#232mes avec les champs suivants :"
+        header:
+          one:   "1 erreurs nous emp&#232chent de traiter votre {{model}}"
+          other: "{{count}} erreurs nous emp&#232chent de traiter votre {{model}}"
+      messages:
+        inclusion: ": choisir un mode de paiement dans la liste"
+        blank:     ": champ obligatoire"
+#END:errors
+
+#START:layout
+#START:cart
+  layout:
+#END:cart
+    title:       "Biblioth&#232que pragmatique"
+    side:
+      home:      "Accueil"
+      questions: "Questions"
+      news:      "Nouvelles"
+      contact:   "Contacts"
+#END:layout
+#START:cart
+    cart:
+      title:      "Votre panier"
+      button:
+        empty:    "Vider votre panier"
+        checkout: "Passer la commande"
+#END:cart
+
+#START:main
+  main:
+    title:       "Votre catalogue pragmatique"
+    button:
+      add:       "Ajouter au panier"
+#END:main
+
+#START:checkout
+  checkout:
+    legend:      "Merci de renseigner vos coordon&#233es"
+    name:        "Nom"
+    address:     "Adresse"
+    email:       "E-mail"
+    pay_type:    "Paiement"
+    pay_prompt:  "S&#233lectionner un type de paiement"
+    submit:      "Enregistrer"
+#END:checkout
+
+#START:flash
+  flash:
+    thanks:      "Merci pour votre commande"
+#END:flash
